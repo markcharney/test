@@ -16,4 +16,4 @@ matrix:
 script:
     - pip install --user https://github.com/intelxed/mbuild/zipball/master
     - python ci.py
-    - ls /home/travis/virtualenv/python
+    - which python
