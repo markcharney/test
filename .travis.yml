@@ -1,0 +1,19 @@
+language: c
+
+addons:
+    apt:
+        packages:
+            # 32 bit support
+            - gcc-multilib
+
+matrix:
+    include:
+    - compiler: gcc
+      os: linux
+    - compiler: clang
+      os: osx
+     
+script:
+    - pip install --user https://github.com/intelxed/mbuild/zipball/master
+    - python ci.py
+    - ls /home/travis/virtualenv/python
