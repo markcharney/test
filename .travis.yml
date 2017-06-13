@@ -17,8 +17,10 @@ matrix:
 #      os: osx
      
 script:
-    - pip install --user https://github.com/intelxed/mbuild/zipball/master
-    - ls 
+     - which pip
+     - which pip3
+#    - pip install --user https://github.com/intelxed/mbuild/zipball/master
+#    - ls 
 #    - python ci.py
     - which python
 #    - ls /usr/bin/python*
