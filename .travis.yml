@@ -21,6 +21,6 @@ script:
     - python ci.py
     - which python
     - ls /usr/bin/python*
-    - ls /opt
+    - ls /opt/python
 
 
