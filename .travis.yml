@@ -1,7 +1,5 @@
 language: c
 
-sudo: enabled
-dist: trusty
 
 addons:
     apt:
@@ -13,6 +11,8 @@ matrix:
     include:
     - compiler: gcc
       os: linux
+      sudo: enabled
+      dist: trusty
     - compiler: clang
       os: osx
      
