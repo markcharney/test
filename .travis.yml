@@ -1,6 +1,4 @@
 language: c
-
-
 addons:
     apt:
         packages:
@@ -29,5 +27,6 @@ script:
     - ls /usr/local/opt
     - ls /usr/local/opt/python
     - ls /usr/local/opt/python/bin
+    
 
 
