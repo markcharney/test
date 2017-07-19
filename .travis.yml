@@ -1,6 +1,6 @@
 language: c
 before_install:
-    - if [ `uname -s` = 'Linux' ]; sudo apt-get install -y python python3 ; fi
+    - if [ `uname -s` = 'Linux' ]; then sudo apt-get install -y python python3 ; fi
 addons:
     apt:
         packages:
