@@ -10,6 +10,30 @@ import subprocess
 #        print(cmd)
 #        subprocess.check_call(cmd, shell=True)
 
+
+
+def get_python_cmds():
+    if platform.system() == 'Windows':
+        lst = []
+        pyvers = ['27','35']
+        #pyvers = ['27']
+        for pyver in pyvers:
+            pycmd = 'C:/python{}/python'.format(pyver)
+            lst.append((pyver,pycmd))
+        return lst
+    elif platform.system() == 'Linux':
+        # The file .travis.yml installs python2 and python3
+        return [('2.7','python'),
+                ('3.x','python3')]
+    
+    return [('dfltpython','python')]
+        
+    
+for pyver,pycmd in get_python_cmds():
+    cmd = '{} -m pip install --user https://github.com/intelxed/mbuild/zipball/master'.format(pycmd)
+    print(cmd)
+    subprocess.check_call(cmd, shell=True)
+
 print("hello")
 print(sys.executable)
 sys.exit(0)
