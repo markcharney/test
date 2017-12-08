@@ -9,12 +9,12 @@ addons:
 
 matrix:
     include:
-    - compiler: gcc
-      os: linux
-      sudo: enabled
-      dist: trusty
-#    - compiler: clang
-#      os: osx
+#    - compiler: gcc
+#      os: linux
+#      sudo: enabled
+#      dist: trusty
+    - compiler: clang
+      os: osx
      
 script:
     - which python
@@ -24,7 +24,7 @@ script:
 #    - pip install --user https://github.com/intelxed/mbuild/zipball/master
 #    - ls 
 #    - python ci.py
-    - which python
+#    - which python
 #    - ls /usr/bin/python*
 #    - ls /opt/python
     - ls /usr/local/bin
