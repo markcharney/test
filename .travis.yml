@@ -1,6 +1,6 @@
 language: c
 before_install:
-    - if [ `uname -s` = 'Linux' ]; then sudo apt-get install -y python python3 ; fi
+    - if [ `uname -s` = 'Linux' ]; then sudo apt-get install -y python python3 ; else brew install pip python3 pip3; fi
 addons:
     apt:
         packages:
@@ -20,6 +20,7 @@ script:
     - which python
     - which python3
     - which pip
+    - which pip2
     - which pip3
 #    - pip install --user https://github.com/intelxed/mbuild/zipball/master
 #    - ls 
