@@ -1,6 +1,6 @@
 language: c
 before_install:
-    - if [ `uname -s` = 'Linux' ]; then sudo apt-get install -y python python3 ; else brew install python@2 python; fi
+    - if [ `uname -s` = 'Linux' ]; then sudo apt-get install -y python python3 ; else brew upgrade python ; brew install python2; fi
 addons:
     apt:
         packages:
