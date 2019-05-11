@@ -4,29 +4,15 @@ import sys
 import platform
 import subprocess
 
-#for size in ['ia32','x86-64']:
-#    for link in ['','--shared']:
-#        cmd = 'python mfile.py --build-dir=build host_cpu=%s %s test' % (size,link)
-#        print(cmd)
-#        subprocess.check_call(cmd, shell=True)
-
-
-
 def get_python_cmds():
     if platform.system() == 'Windows':
-        lst = []
-        pyvers = ['27','35']
-        #pyvers = ['27']
-        for pyver in pyvers:
-            pycmd = 'C:/python{}/python'.format(pyver)
-            lst.append((pyver,pycmd))
-        return lst
-    elif platform.system() == 'Linux':
-        # The file .travis.yml installs python2 and python3
-        return [('2.7','python'),
-                ('3.x','python3')]
+        return [ (x,'C:/python{}/python'.format(x)) for x in ['37'] ]
+      
+    elif platform.system() in ['Darwin,'Linux']:
+        # The file .travis.yml installs python3
+        return [ ('3.x','python3')]
     
-    return [('dfltpython','python')]
+    return [('dfltpython','python3')]
         
     
 for pyver,pycmd in get_python_cmds():
