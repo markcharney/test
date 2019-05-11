@@ -1,6 +1,7 @@
+dist: xenial
 language: c
-before_install:
-    - if [ `uname -s` = 'Linux' ]; then sudo apt-get install -y python python3 ; else brew install python python3; fi
+#before_install:
+#    - if [ `uname -s` = 'Linux' ]; then sudo apt-get install -y python python3 ; else brew install python python3; fi
 addons:
     apt:
         packages:
@@ -22,6 +23,9 @@ script:
     - which pip
     - which pip2
     - which pip3
+    - gcc --version
+    - python3 --version
+    - python --version
 #    - pip install --user https://github.com/intelxed/mbuild/zipball/master
 #    - ls 
 #    - python ci.py
