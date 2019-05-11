@@ -8,7 +8,7 @@ def get_python_cmds():
     if platform.system() == 'Windows':
         return [ (x,'C:/python{}/python'.format(x)) for x in ['37'] ]
       
-    elif platform.system() in ['Darwin,'Linux']:
+    elif platform.system() in ['Darwin','Linux']:
         # The file .travis.yml installs python3
         return [ ('3.x','python3')]
     
