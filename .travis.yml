@@ -1,6 +1,6 @@
 language: c
-before_install:
-    - if [ `uname -s` = 'Linux' ]; then sudo apt-get install -y python python3 ; else brew install python python3; fi
+#before_install:
+#    - if [ `uname -s` = 'Linux' ]; then sudo apt-get install -y python python3 ; else brew install python python3; fi
 addons:
     apt:
         packages:
@@ -9,10 +9,10 @@ addons:
 
 matrix:
     include:
-#    - compiler: gcc
-#      os: linux
-#      sudo: enabled
-#      dist: trusty
+    - compiler: gcc
+      os: linux
+      sudo: enabled
+      dist: xenial
     - compiler: clang
       os: osx
      
@@ -22,6 +22,9 @@ script:
     - which pip
     - which pip2
     - which pip3
+    - if [ `uname -s` = 'Linux' ]; then gcc --version;  else clang --version; fi
+    - python3 --version
+    - python --version
 #    - pip install --user https://github.com/intelxed/mbuild/zipball/master
 #    - ls 
 #    - python ci.py
