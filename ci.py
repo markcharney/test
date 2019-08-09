@@ -37,3 +37,4 @@ for pyver,pycmd in get_python_cmds():
 print("hello")
 print(sys.executable)
 sys.exit(0)
+
