@@ -17,28 +17,7 @@ matrix:
       os: osx
      
 script:
-    - which python
-    - which python3
-    - which pip
-    - which pip2
-    - which pip3
-    - if [ `uname -s` = 'Linux' ]; then gcc --version;  fi
-    - clang --version
-    - if [ `uname -s` = 'Linux' ]; then cat /etc/os-release; fi
-    - python3 --version
-    - python --version
-    - pip --version
-    - pip3 --version
-#    - pip install --user https://github.com/intelxed/mbuild/zipball/master
-#    - ls 
-#    - python ci.py
-#    - which python
-#    - ls /usr/bin/python*
-#    - ls /opt/python
-#  - ls /usr/local/bin
-#    - ls /usr/local/opt
-#    - ls /usr/local/opt/python
-#    - ls /usr/local/opt/python/bin
+    python3 ci.py
     
 
 

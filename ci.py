@@ -23,7 +23,7 @@ def get_python_cmds():
         return lst
     elif platform.system() == 'Linux':
         # The file .travis.yml installs python2 and python3
-        return [('2.7','python'),
+        return [# ('2.7','python'),
                 ('3.x','python3')]
     
     return [('dfltpython','python')]
