@@ -17,7 +17,7 @@ matrix:
       os: osx
      
 script:
-    python3 -m pip install -U pip
+    sudo pip3 install --upgrade setuptools
     python3 ci.py
     
 
